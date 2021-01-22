@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.map {
+  background-image: url("./images/map.jpg");
+  background-size:cover;
+  width:100%;
+  height:100%;
+  top:0;
+  opacity: 0.5;
+  position:fixed;
+  z-index:-1;
+}
+.block1 {
+  margin-top: 20px;
+  border-style: groove;
+  border-color: brown;
+  border-radius: 20px;
+}
+.search-engine {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+#celsius {
+  color: darkblue;
+}
+#celsius:hover {
+  color: darkblue;
+  cursor: pointer;
+}
+#farenheit {
+  color: rgb(53, 0, 139);
+}
+#farenheit:hover {
+  color: rgb(53, 0, 139);
+  cursor: pointer;
+}
+.currentplace {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.cityname {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+.block2 {
+  margin-top: 50px;
+  border-style: dotted;
+  border-color: whitesmoke;
+  border-radius: 20px;
+}
+.followingdays {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  text-align: center;
+}
+.cls {
+  text-align: center;
+  margin-left: auto;
+  color: blueviolet;
+  cursor: pointer;
+}
+.cls:hover {
+  color: blueviolet;
+  cursor: pointer;
+}
+.fht {
+  text-align: center;
+  margin-right: auto;
+  color: blueviolet;
+  cursor: pointer;
+}
+.fht:hover {
+  color: blueviolet;
+  cursor: pointer;
+}
+.weather {
+  width: 100%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+.c1 {
+  border-color: none;
+  padding: 10px;
+  transition: all 200ms ease;
+}
+.c1:hover {
+  border: 1px solid white;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  border-radius: 2px;
+}
+.earthmorning {
+  width: 100%;
+}
+.link {
+  color: rgb(34, 10, 34);
+  text-align: center;
+}
+.opencode {
+  color: rgb(82, 26, 82);
+  text-decoration: underline;
+}
+.opencode:hover {
+  color: rgb(82, 26, 82);
+}
+
