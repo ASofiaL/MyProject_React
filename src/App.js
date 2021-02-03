@@ -15,6 +15,7 @@ export default function App() {
                 type="city"
                 className="form-control"
                 placeholder="Current City"
+                autoFocus="on"
               />
             </div>
             <button type="submit" className="btn btn-primary mb-2">
