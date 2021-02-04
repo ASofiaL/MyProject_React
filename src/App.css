@@ -24,17 +24,17 @@ body {
   margin-top: 20px;
 }
 
-#celsius {
+.celsius {
   color: darkblue;
 }
-#celsius:hover {
+.celsius:hover {
   color: darkblue;
   cursor: pointer;
 }
-#farenheit {
+.farenheit {
   color: rgb(53, 0, 139);
 }
-#farenheit:hover {
+.farenheit:hover {
   color: rgb(53, 0, 139);
   cursor: pointer;
 }
