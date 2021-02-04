@@ -7,7 +7,7 @@ export default function App() {
   function handleResponse (response) {
     setWeatherData({
       ready: true,
-      date: "wednesday",
+      date: new Date (response.data.dt)*1000,
       temperature: Math.round(response.data.main.temp),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
