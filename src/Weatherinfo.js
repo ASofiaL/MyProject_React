@@ -12,15 +12,9 @@ export default function WeatherInfo(props) {
                     <div className="col-4">
                         <span className="currentplace">
                             <h5 className="date"><FormattedDate date={props.data.date} /></h5>
-                            <WeatherIcon code={props.data.icon}/>
-                            <h1>
-                                {" "}
-                                <img
-                                    src={props.data.iconUrl}
-                                    alt={props.data.description}
-                                    className="icon"
-                                />{" "}
-                            </h1>
+                            <div className="float-left">
+                            <WeatherIcon code={props.data.icon} alt={props.data.description}/>
+                            </div>
                             <h4>
                                 <span className="text-capitalize">{props.data.description}</span>
                             </h4>
@@ -56,17 +50,6 @@ export default function WeatherInfo(props) {
                 <div className="followingdays">
                     <div className="row"></div>
                 </div>
-                </div>
-            <div className="link">
-                <a
-                    className="opencode"
-                    href="https://github.com/ASofiaL?tab=repositories"
-                    target="blank"
-                >
-                    {" "}
-              Open-source code{" "}
-                </a>
-                <strong>by ASofiaL</strong>
             </div>
             <script src="src/index.js"></script>
         </div>
