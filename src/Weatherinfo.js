@@ -50,11 +50,9 @@ export default function WeatherInfo(props) {
                     </div>
                 </div>
             </div>
-            <div className="container block2">
                 <div className="followingdays">
                     <div className="row"></div>
                 </div>
-            </div>
             <div className="link">
                 <a
                     className="opencode"
