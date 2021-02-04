@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import FormattedDate from './FormattedDate';
+import WeatherInfo from './Weatherinfo';
 import axios from 'axios';
 import './App.css';
 
-export default function App() {
+export default function App(props) {
   const [weatherData, setWeatherData] = useState ({ready: false});
+  const [city, setCity] = useState (props);
   function handleResponse (response) {
     setWeatherData({
       ready: true,
@@ -18,12 +19,28 @@ export default function App() {
       city: response.data.name,
     });
   }
+  function search () {
+    let apiKey = "d2fb406d396cc1b4a8610cb40058cbde";
+    let city = "Lisbon"
+    let units = "metric";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }
+  function handleSubmit (event) {
+    event.preventDefault ();
+    search(city);
+  }
+  function handleCityChange (event) {
+    setCity(event.target.value);
+  }
+
      if (weatherData.ready) {
       return (
         <div className="App">
           <div className="container block1">
             <div className="row">
-              <form className="form-inline search-engine">
+              <form className="form-inline search-engine" onSubmit={handleSubmit}>
                 <div className="form-group mx-sm-3 mb-2">
                   <label htmlFor="inputcity" className="sr-only">
                     City
@@ -33,83 +50,19 @@ export default function App() {
                     className="form-control"
                     placeholder="Current City"
                     autoFocus="on"
+                    onChange={handleCityChange}
                   />
                 </div>
                 <button type="submit" className="btn btn-primary mb-2">
                   Search
                 </button>
               </form>
+              <WeatherInfo data={weatherData}/>
             </div>
-            <div className="row">
-              <div className="col-4">
-                <span className="currentplace">
-                  <h5 className="date"><FormattedDate date={weatherData.date}/></h5>
-                  <h1>
-                    {" "}
-                    <img
-                      src={weatherData.iconUrl}
-                      alt={weatherData.description}
-                      className="icon"
-                    />{" "}
-                  </h1>
-                  <h4>
-                    <span className="text-capitalize">{weatherData.description}</span>
-                  </h4>
-                  <h2>
-                    <span className="temperature">{weatherData.temperature}</span>
-                    <span className="celsius"> ºC</span>|<span className="farenheit">ºF</span>
-                  </h2>
-                </span>
-              </div>
-              <div className="col-8">
-                <span className="currentplace">
-                  <div className="currentcity">
-                    <div className="row">
-                      <h1 className="cityname">{weatherData.city}</h1>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-4">
-                      Pressure: {weatherData.pressure} h/Pa
-                    </div>
-                    <div className="col-4">
-                      Humidity: {weatherData.humidity} %
-                    </div>
-                    <div className="col-4">
-                      Wind: {weatherData.wind} km/h
-                    </div>
-                  </div>
-                </span>
-              </div>
             </div>
-          </div>
-          <div className="container block2">
-            <div className="followingdays">
-              <div className="row"></div>
             </div>
-          </div>
-          <div className="link">
-            <a
-              className="opencode"
-              href="https://github.com/ASofiaL?tab=repositories"
-              target="blank"
-            >
-              {" "}
-              Open-source code{" "}
-            </a>
-            <strong>by ASofiaL</strong>
-          </div>
-          <script src="src/index.js"></script>
-        </div>
       );
     } else {
-      let apiKey = "fc1ba4d8c20faae50c9db10bb53ae3ed";
-      let city = "Lisbon"
-      let units = "metric";
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-  
-      axios.get(apiUrl).then(handleResponse);
-
-      return "Loading...";
-    }  
+      search();
+      return "Loading...";}
 }
