@@ -103,6 +103,7 @@ export default function App(props) {
       );
     } else {
       let apiKey = "fc1ba4d8c20faae50c9db10bb53ae3ed";
+      city = "Lisbon"
       let units = "metric";
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=${units}`;
   
