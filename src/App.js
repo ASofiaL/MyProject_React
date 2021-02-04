@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
-export default function App() {
+export default function App(props) {
   const [weatherData, setWeatherData] = useState ({ready: false});
   function handleResponse (response) {
     setWeatherData({
@@ -68,13 +68,13 @@ export default function App() {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="press" className="col-4">
+                    <div className="col-4">
                       Pressure: {weatherData.pressure} h/Pa
                     </div>
-                    <div className="humi" className="col-4">
+                    <div className="col-4">
                       Humidity: {weatherData.humidity} %
                     </div>
-                    <div className="wind" className="col-4">
+                    <div className="col-4">
                       Wind: {weatherData.wind} km/h
                     </div>
                   </div>
@@ -84,7 +84,7 @@ export default function App() {
           </div>
           <div className="container block2">
             <div className="followingdays">
-              <div className="row" className="forecast"></div>
+              <div className="row"></div>
             </div>
           </div>
           <div className="link">
@@ -103,9 +103,8 @@ export default function App() {
       );
     } else {
       let apiKey = "fc1ba4d8c20faae50c9db10bb53ae3ed";
-      let city = "Lisbon";
       let units = "metric";
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=${units}`;
   
       axios.get(apiUrl).then(handleResponse);
 
