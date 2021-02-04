@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 
-export default function App(props) {
+export default function App() {
   const [weatherData, setWeatherData] = useState ({ready: false});
   function handleResponse (response) {
     setWeatherData({
@@ -42,7 +42,7 @@ export default function App(props) {
             <div className="row">
               <div className="col-4">
                 <span className="currentplace">
-                  <h5 className="date">{weatherData.date}</h5>
+                  <h5 className="date">{weatherData.date.getDay()}</h5>
                   <h1>
                     {" "}
                     <img
@@ -103,9 +103,9 @@ export default function App(props) {
       );
     } else {
       let apiKey = "fc1ba4d8c20faae50c9db10bb53ae3ed";
-      city = "Lisbon"
+      let city = "Lisbon"
       let units = "metric";
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=${units}`;
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
   
       axios.get(apiUrl).then(handleResponse);
 
