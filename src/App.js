@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import FormattedDate from './FormattedDate';
 import axios from 'axios';
 import './App.css';
 
@@ -42,7 +43,7 @@ export default function App() {
             <div className="row">
               <div className="col-4">
                 <span className="currentplace">
-                  <h5 className="date">{weatherData.date.getDay()}</h5>
+                  <h5 className="date"><FormattedDate date={weatherData.date}/></h5>
                   <h1>
                     {" "}
                     <img
