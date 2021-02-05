@@ -64,11 +64,11 @@ body {
 .cls {
   text-align: center;
   margin-left: auto;
-  color: blueviolet;
+  color: #45180B;
   cursor: pointer;
 }
 .cls:hover {
-  color: blueviolet;
+  color: #200b05;
   cursor: pointer;
 }
 .fht {
@@ -97,9 +97,6 @@ body {
   border: 1px solid white;
   box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
   border-radius: 2px;
-}
-.earthmorning {
-  width: 100%;
 }
 .link {
   color: rgb(34, 10, 34);

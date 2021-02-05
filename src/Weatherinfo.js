@@ -13,7 +13,7 @@ export default function WeatherInfo(props) {
                         <span className="currentplace">
                             <h5 className="date"><FormattedDate date={props.data.date} /></h5>
                             <div className="float-left">
-                            <WeatherIcon code={props.data.icon} alt={props.data.description}/>
+                            <WeatherIcon code={props.data.icon}/>
                             </div>
                             <h4>
                                 <span className="text-capitalize">{props.data.description}</span>
