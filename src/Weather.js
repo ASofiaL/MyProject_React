@@ -60,8 +60,8 @@ export default function Weather (props) {
                 Search
               </button>
             </form>
-            <WeatherInfo data={weatherData}/>
             </div>
+            <WeatherInfo data={weatherData}/>
           </div>
     );
   } else {

@@ -12,7 +12,7 @@ export default function WeatherInfo(props) {
                     <div className="col-4">
                         <span className="currentplace">
                             <h5 className="date"><FormattedDate date={props.data.date} /></h5>
-                            <div className="float-left">
+                            <div className="float-center">
                             <WeatherIcon code={props.data.icon}/>
                             </div>
                             <h4>

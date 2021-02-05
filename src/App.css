@@ -25,17 +25,17 @@ body {
 }
 
 .celsius {
-  color: darkblue;
+  color: rgb(85, 71, 12);
 }
 .celsius:hover {
-  color: darkblue;
+  color: rgb(85, 71, 12);
   cursor: pointer;
 }
 .farenheit {
-  color: rgb(53, 0, 139);
+  color: rgb(141, 32, 24);
 }
 .farenheit:hover {
-  color: rgb(53, 0, 139);
+  color: rgb(141, 32, 24);
   cursor: pointer;
 }
 .currentplace {
