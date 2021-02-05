@@ -23,8 +23,5 @@ export default function App() {
                 <strong>by ASofiaL</strong>
     </div>
     </div>
-
   )
-
-    
 }
