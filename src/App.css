@@ -25,10 +25,10 @@ body {
 }
 
 .unitcelsius {
-  color: rgb(85, 71, 12);
+  color: rgb(141, 32, 24);
 }
 .unitcelsius:hover {
-  color: rgb(85, 71, 12);
+  color: rgb(141, 32, 24);
   cursor: pointer;
 }
 .unitfahrenheit {
