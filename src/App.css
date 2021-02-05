@@ -64,21 +64,24 @@ body {
 
 .WeatherForecast {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px;
 }
 
 .WeatherForecast canvas {
+  text-align: center;
   display: block;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .link {
-  color: rgb(34, 10, 34);
+  color: rgb(54, 45, 0);
   text-align: center;
 }
 .opencode {
-  color: rgb(82, 26, 82);
+  color: rgb(54, 45, 0);
   text-decoration: underline;
 }
 .opencode:hover {
-  color: rgb(82, 26, 82);
+  color: rgb(54, 45, 0);
 }
