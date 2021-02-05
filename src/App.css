@@ -24,17 +24,17 @@ body {
   margin-top: 20px;
 }
 
-.celsius {
+.unitcelsius {
   color: rgb(85, 71, 12);
 }
-.celsius:hover {
+.unitcelsius:hover {
   color: rgb(85, 71, 12);
   cursor: pointer;
 }
-.farenheit {
+.unitfahrenheit {
   color: rgb(141, 32, 24);
 }
-.farenheit:hover {
+.unitfahrenheit:hover {
   color: rgb(141, 32, 24);
   cursor: pointer;
 }
