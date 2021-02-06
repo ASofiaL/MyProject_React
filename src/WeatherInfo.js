@@ -33,7 +33,7 @@ export default function WeatherInfo(props) {
                             </div>
                             <div className="row">
                                 <div className="col-4">
-                                    Pressure: {props.data.pressure} h/Pa
+                                    Pressure: {props.data.pressure} hPa
                     </div>
                                 <div className="col-4">
                                     Humidity: {props.data.humidity} %
